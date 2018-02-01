@@ -1,0 +1,35 @@
+//
+//  PrefixHeader.pch
+//  AutoAnswer
+//
+//  Created by 金峰 on 2018/1/16.
+//  Copyright © 2018年 金峰. All rights reserved.
+//
+
+#ifndef PrefixHeader_pch
+#define PrefixHeader_pch
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+
+#import <AFNetworking.h>
+#import <Masonry.h>
+#import "SJNetworkHelper.h"
+
+
+
+static NSString *sogouUrl = @"/api/ans2";
+
+
+
+#define kCDDH_HOST @"api.api.chongdingdahui.com"
+
+
+
+#ifdef DEBUG
+#define DELog(format, ...) printf("class: <%p %s:(%d) > method: %s \n%s\n", self, [[[NSString stringWithUTF8String:__FILE__] lastPathComponent] UTF8String], __LINE__, __PRETTY_FUNCTION__, [[NSString stringWithFormat:(format), ##__VA_ARGS__] UTF8String] )
+#else
+#define DELog(format, ...)
+#endif
+
+#endif /* PrefixHeader_pch */
